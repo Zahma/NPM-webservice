@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+	<body>
+
+<div id="div1"><h2>Call The API through :)</h2></div>
+
+<button>Get External Content</button>
+
+	</body>
+	<script>
+	$(document).ready(function(){
+	    $("button").click(function(){
+	        $.ajax({url: "http://127.0.0.1:8000/api", success: function(result){
+	            $("#div1").html(result);
+	        }});
+	    });
+	});
+	</script>	
+</html>
